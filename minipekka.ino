@@ -18,7 +18,7 @@ void setup(){
     motor_9.run(200);
     motor_10.run(200);
     while(robapresa==0){
-    if((ultrasonic_8.distanceCm()) > (0)){
+    if((ultrasonic_8.distanceCm()) > (16)){
         motor_9.run(0);
         motor_10.run(0);
         motor_1.run(0);
