@@ -38,7 +38,7 @@ void setup(){
             motor_10.run(120);
             break;
         }
-        if((ultrasonic_8.distanceCm()) < (16) && robapresa!=0){
+        if((ultrasonic_8.distanceCm()) < (16) && robapresa==0){
             motor_9.run(0);
             motor_10.run(0);
             motor_1.run(100);
@@ -48,7 +48,6 @@ void setup(){
             motor_2.run(0);
             robapresa=1;
         }
-
     }
 }
 
