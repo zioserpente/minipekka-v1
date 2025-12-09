@@ -13,7 +13,7 @@ MeLineFollower linefollower_6(6);   //sensore per seguire il percorso dato (se p
 
 void setup(){
     int robapresa=EEPROM.read(0);
-    if(robapresa==0){resetbraccio();}
+    if(robapresa==1){resetbraccio();}
     motor_9.run(120);
     motor_10.run(120);
     while(1){

@@ -65,4 +65,4 @@ Il suo scopo principale è:
 ---
 
 ## 🎯 Obiettivo
-Il robot **MINIPEKKA V1** è progettato per: Automatizzare la raccolta e il rilascio di piccoli oggetti.
+Il robot **MINIPEKKA V1** è progettato per automatizzare la raccolta e il rilascio di piccoli oggetti.
