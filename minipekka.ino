@@ -14,28 +14,16 @@ void setup(){
     resetbraccio();
     motor_9.run(120);
     motor_10.run(120);
-    while(robapresa==0){
-    if((ultrasonic_8.distanceCm()) < (16)){
-        motor_9.run(0);
-        motor_10.run(0);
-        motor_1.run(100);
-        motor_2.run(-100);
-        _delay(1);
-        motor_1.run(0);
-        motor_2.run(0);
-        robapresa=1;
-    }}
-    motor_9.run(150);
-    // motor_10.run(-100);
-    _delay(0.75);
-    motor_10.run(150);
-    while (robapresa==1)
-    {
+    while(1){
         switch (linefollower_6.readSensors())
         {
         case 3://lato destro e sinistro del sensore sono su colore bianco, il robot si ferma
             motor_9.run(0);
             motor_10.run(0);
+            if(robapresa==1){
+                resetbraccio();
+                robapresa=0;
+            }
             break;
         case 2: //girare a destra
             motor_9.run(0);
@@ -50,6 +38,17 @@ void setup(){
             motor_10.run(120);
             break;
         }
+        if((ultrasonic_8.distanceCm()) < (16) && robapresa!=0){
+            motor_9.run(0);
+            motor_10.run(0);
+            motor_1.run(100);
+            motor_2.run(-100);
+            _delay(1);
+            motor_1.run(0);
+            motor_2.run(0);
+            robapresa=1;
+        }
+
     }
 }
 
