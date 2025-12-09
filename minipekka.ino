@@ -44,7 +44,7 @@ void setup(){
         if((ultrasonic_8.distanceCm()) < (16) && robapresa==0){
             motor_9.run(0);
             motor_10.run(0);
-            motor_1.run(100);
+            motor_1.run(120);
             motor_2.run(-100);
             _delay(1);
             motor_1.run(0);
@@ -57,7 +57,7 @@ void setup(){
 
 void resetbraccio(){//resetta il braccio, allargando il braccio e alzandolo
     motor_1.run(-120);
-    motor_2.run(100);
+    motor_2.run(120);
     _delay(1);
     motor_1.run(0);
     motor_2.run(0);
